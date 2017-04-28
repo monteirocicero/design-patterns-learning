@@ -7,6 +7,7 @@ public class CriteriaPatternDemo {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		List<Person> persons = new ArrayList();
 
 		persons.add(new Person("Robert", "Male", "Single"));
