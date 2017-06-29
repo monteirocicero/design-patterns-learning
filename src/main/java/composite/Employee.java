@@ -1,5 +1,6 @@
 package composite;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
@@ -25,12 +26,15 @@ public class Employee {
 	}
 	
 	public List<Employee> getSubordinates() {
+		if (this.subordinates == null) {
+			subordinates = new ArrayList();
+		}
 		return subordinates;
 	}
 	
 	@Override
 	public String toString() {
-		return "[Employee :[ name : " + name + ", dept : " + dept + "salary: " + salary + " ]";
+		return "[Employee :[ name : " + name + ", dept : " + dept + ", salary: " + salary + " ]";
 	}
 
 }
